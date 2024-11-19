@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="深度学习的数学基础——线性代数基础朱宇阳现代术语 “深度学习’’ 超越了目前机器学习模型的神经科学观点。它诉诸于学习多层次组合这一更普遍的原理，这一原理也可以应用于那些并非受神经科学启发的机器学习框架 神经元模型（控制论）-联结主义（并行运算）-深度学习 线性组合，生成子空间，列空间解释: 为了使方程 Ax &#x3D; b 对于任意向量 b ∈ $R^m$ 都存在解，我们要求 A 的列空间构 成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/11/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AF%87/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="深度学习的数学基础——线性代数基础朱宇阳现代术语 “深度学习’’ 超越了目前机器学习模型的神经科学观点。它诉诸于学习多层次组合这一更普遍的原理，这一原理也可以应用于那些并非受神经科学启发的机器学习框架 神经元模型（控制论）-联结主义（并行运算）-深度学习 线性组合，生成子空间，列空间解释: 为了使方程 Ax &#x3D; b 对于任意向量 b ∈ $R^m$ 都存在解，我们要求 A 的列空间构 成">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715048227422.png">
+<meta property="og:image" content="file:///C:/Users/%E6%9C%B1%E5%AE%87%E9%98%B3/Documents/Tencent%20Files/2137917427/Image/Group2/40/DC/40DC1@7DJL@$6@%%_08@HRW_tmb.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715244840431.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715245039579.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715245894563.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715245911196.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715245809517.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715246343467.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715246586687.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715246844265.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715247005471.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715246965650.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715247078394.png">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715247186324.png">
+<meta property="article:published_time" content="2024-11-19T13:11:54.655Z">
+<meta property="article:modified_time" content="2024-05-09T10:13:33.614Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1715048227422.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-深度学习的数学基础-线性代数篇" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AF%87/" class="article-date">
+  <time class="dt-published" datetime="2024-11-19T13:11:54.655Z" itemprop="datePublished">2024-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="深度学习的数学基础——线性代数基础"><a href="#深度学习的数学基础——线性代数基础" class="headerlink" title="深度学习的数学基础——线性代数基础"></a>深度学习的数学基础——线性代数基础</h1><h2 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a>朱宇阳</h2><p><strong>现代术语 “深度学习’’ 超越了目前机器学习模型的神经科学观点。它诉诸于学<br>习多层次组合这一更普遍的原理，这一原理也可以应用于那些并非受神经科学启发<br>的机器学习框架</strong></p>
+<p>神经元模型（控制论）-联结主义（并行运算）-深度学习</p>
+<h4 id="线性组合，生成子空间，列空间"><a href="#线性组合，生成子空间，列空间" class="headerlink" title="线性组合，生成子空间，列空间"></a>线性组合，生成子空间，列空间</h4><p>解释: 为了使方程 Ax &#x3D; b 对于任意向量 b ∈ $R^m$ 都存在解，我们要求 A 的列空间构 成整个 $R^m$。如果$R^m$中的某个点不在 A 的列空间中，那么该点对应的 b 会使得该方程没有解。矩阵 A 的列空间是整个$R^m$ 的要求，意味着 A 至少有 m 列，即 n ≥ m。否则，A 列空间的维数会小于 m。例如， 假设A是一个 3 × 2 的矩阵。目标 b 是 3 维的，但是 x 只有 2 维。所以无论如何修改 x 的值，也只能描绘出 $R^3$ 空间中的二维平面。当且仅当向量 b 在该二维平面中时，该方程有解。</p>
+<p> 如果某个向量是一组向量中某些向量的线性组合，那么我 们将这个向量加入到这组向量后不会增加这组向量的生成子空间。  这意味着，如果 一个矩阵的列空间涵盖整个 $R^m$，那么该矩阵必须包含至少一组 m 个线性无关的向量。 </p>
+<p> 要想使矩阵可逆，我们还需要保证Ax&#x3D;b对于每一个 b 值至多有一个解。为此，我们需要确保该矩阵至多有 m 个列向量。否则，该方程会有不止一个解。  综上所述，该矩阵必须是一个方阵（square），即 m &#x3D; n，并且所有列向量都是线性无关的。一个列向量线性相关的方阵被称为奇异的（singular）。 如果矩阵 A 不是一个方阵或者是一个奇异的方阵，该方程仍然可能有解。但是 我们不能使用矩阵逆去求解。 </p>
+<h4 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h4><p>$L^p范数的定义||x||<em>p&#x3D;(\sum</em>{i} |x_i|^p)，p\in R,p\geq 1$</p>
+<p> 范数（包括 Lp范数）是将向量映射到非负值的函数。直观上来说，向量 x 的范数衡量从原点到点 x 的距离。更严格地说，范数是满足下列性质的任意函数：  </p>
+<ul>
+<li>$f(x)&#x3D;0 \Rightarrow x&#x3D;0$</li>
+<li>$f(x+y) \leq f(x)+f(y)$</li>
+<li>$f(\alpha x)&#x3D;|\alpha|f(x)$</li>
+</ul>
+<p>$L^\infty范数：||x||_\infty&#x3D;max|x_i|$</p>
+<p>$F范数: ||A||<em>F&#x3D;\surd \sum</em>{i,j}A_{\text{i,j}}^2$</p>
+<h4 id="常见概念"><a href="#常见概念" class="headerlink" title="常见概念"></a>常见概念</h4><p>单位向量：具有单位范数的向量，即$||x||_2&#x3D;1$</p>
+<p>x与y正交：$x^Ty&#x3D;0$（要么二者有0范数，要么二者夹角90度）</p>
+<p> 正交矩阵（orthogonal matrix）是指行向量和列向量是分别标准正交的方阵 $A^TA&#x3D;AA^T&#x3D;I$</p>
+<p>每个实对称矩阵都可以分解为实特征向量和实特征值$A&#x3D;Q \Lambda Q^T$</p>
+<p>其中 Q 是 A 的特征向量组成的正交矩阵，Λ 是对角矩阵。特征值$ Λ_i,_j$对应的特征向量是矩阵 Q 的第 i 列，记作 Q:,i。因为 Q 是正交矩阵，我们可以将 A 看作是沿 方向 v (i) 延展 λi 倍的空间 </p>
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715048227422.png" alt="1715048227422" style="zoom: 50%;" />
+
+<p>矩阵的本质是线性变换，以上是特征向量和特征值的作用效果</p>
+<h4 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a>奇异值分解</h4><p>每个实数矩阵都有一个奇异值分解，但不一定都有特征分解。例如，非方阵的矩阵没 有特征分解，这时我们只能使用奇异值分解。 即$A&#x3D;UDV^T$<br>($若A为m<em>n,则 U，D，V分别为m</em>m,m<em>n,n</em>n$)<br>这些矩阵中的每一个经定义后都拥有特殊的结构。矩阵 U 和 V 都被定义为正交矩阵，而矩阵 D 被定义为对角矩阵。注意，矩阵 D 不一定是方阵。对角矩阵 D 对角线上的元素被称为矩阵 A 的 奇异值（singular value）。矩阵U 的列向量被称为 左奇异向量（left singular vector），矩阵 V 的列向量被称 右奇异向量（right singular vector）。</p>
+<p> 事实上，我们可以用与 A 相关的特征分解去解释 A 的奇异值分解。A 的 左奇异向量是$ AA^⊤$ 的特征向量。A 的 右奇异向量是$A ^⊤A $的特征向量。A 的非零奇异值是 $A^⊤A $特征值的平方根，同时也是 $AA^⊤ $特征值的平方根。<br> <img src="file:///C:\Users\朱宇阳\Documents\Tencent Files\2137917427\Image\Group2\40\DC\40DC1@7DJL@$6@%%_08@HRW_tmb.png" alt="img" style="zoom:50%;" /> </p>
+<h4 id="Moore-Penrose伪逆"><a href="#Moore-Penrose伪逆" class="headerlink" title="Moore-Penrose伪逆"></a>Moore-Penrose伪逆</h4><p>解决非方阵求逆无解或者解不唯一的问题，Moore-Pnerose伪逆给矩阵A的定义为：<br>$A^+&#x3D;\lim_{\alpha\to 0} (A^TA+\alpha I)^{\text{-1}} A^ T$</p>
+<p>实际计算方式为：$A^+&#x3D;VD^+U^T$</p>
+<p> 其中，矩阵 U，D 和 V 是矩阵 A奇异值分解后得到的矩阵。对角矩阵 D 的伪逆 $D^+$ 是其非零元素取倒数之后再转置得到的 </p>
+<p> 当矩阵 A 的列数多于行数时，使用伪逆求解线性方程是众多可能解法中的一 种。特别地，$x&#x3D;A^+y$ 是方程所有可行解中欧几里得范数 $||x||_2$最小的一个。 当矩阵 A 的行数多于列数时，可能没有解。在这种情况下，通过伪逆得到的 x 使得 Ax 和 y 的欧几里得 距离$||Ax-y||_2$最小</p>
+<h4 id="迹运算"><a href="#迹运算" class="headerlink" title="迹运算"></a>迹运算</h4><p>迹运算返回矩阵对角元素的和:$Tr(A)&#x3D;\sum_{i}A_i,_j$<br>迹运算提供了另一种描述矩阵Frobenius范数的方式 $||A||_F&#x3D;\surd Tr(AA^T）$<br>多个矩阵相乘得到的方阵的迹，和将这些矩阵中的最后一个挪到最前面之后相乘的迹是相同的。当然，我们需要考虑挪动之后矩阵乘积依然定义良好：<br>Tr(ABC) &#x3D; Tr(CAB) &#x3D; Tr(BCA).<br>标量在迹运算后仍然是他自己:$a&#x3D;Tr(a)$</p>
+<h4 id="主成分分析-PCA"><a href="#主成分分析-PCA" class="headerlink" title="主成分分析(PCA)"></a>主成分分析(PCA)</h4><p><strong>假设在 $R^n$空间中我们有 m 个点{$x^{\text{(1)}}$, ….$x^{\text{(m)}}}$，我们希望对这些点进行有损压缩。有损压缩表示我们使用更少的内存，但损失一些精度去存储这些点。我们希望损失的精度尽可能少。一种编码这些点的方式是用低维表示。</strong></p>
+<p><strong>对于每个点$ x(i) ∈ R^n$，会有一个对应的编码向量 $c(i) ∈ R^l$。如果 l 比 n 小，那么我们便使用了更少的内存来存储原来的数据。我们希望找到一个编码函数，根据输入返回编码，f(x) &#x3D; c；我们也希望找到一个解码函数，给定编码重构输入，x ≈ g(f(x))。PCA 由我们选择的解码函数而定。具体地，为了简化解码器，我们使用矩阵乘法将编码映射回$R^n$，即 g(c) &#x3D; Dc，其中 D∈ $R^{\text{n*l}}$是定义解码的矩阵</strong></p>
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715244840431.png" alt="1715244840431" style="zoom:50%;" />
+
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715245039579.png" alt="1715245039579" style="zoom:67%;" />
+
+<p>如图，把二维的信息存储到一维</p>
+<p>找到数据分布最分散的方向（即方差最大），作为主成分</p>
+<p>操作方式：1.去中心化（把坐标原点放在数据中心）</p>
+<p>​                    2.找到坐标系,作为<strong>主成分</strong>（方差最大）</p>
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715245894563.png" alt="1715245894563" style="zoom:50%;" />
+
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715245911196.png" alt="1715245911196" style="zoom:50%;" />
+
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715245809517.png" alt="1715245809517" style="zoom:50%;" />
+
+<p>拉伸的方向决定了方差最大的方向是横\纵    旋转决定了方差最大方向旋转的角度，我们要求的就是R，旋转角度</p>
+<p>协方差：两个变量在变化过程中是同方向变化还是反方向，程度如何<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715246343467.png" alt="1715246343467" style="zoom:25%;" /></p>
+<p>协方差矩阵​</p>
+<p>$C &#x3D;<br>\begin{pmatrix}<br>\sigma_{X}^{2} &amp; \sigma_{XY} \<br>\sigma_{YX} &amp; \sigma_{Y}^{2}<br>\end{pmatrix}$  $&#x3D;1&#x3D;$ $\frac{1}{n-1} D D^T$  </p>
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715246586687.png" alt="1715246586687" style="zoom:50%;" />
+
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715246844265.png" alt="1715246844265" style="zoom:50%;" />
+
+<p><img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715247005471.png" alt="1715247005471" style="zoom:67%;" /><img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715246965650.png" alt="1715246965650" style="zoom:67%;" /></p>
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715247078394.png" alt="1715247078394" style="zoom:50%;" />
+
+<img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1715247186324.png" alt="1715247186324" style="zoom:67%;" />
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AF%87/" data-id="cm3oh6g5q000024v20aidgfxz" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/11/19/%E9%A2%84%E8%AE%AD%E7%BB%83%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E5%9C%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/11/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/19/%E9%A2%84%E8%AE%AD%E7%BB%83%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E5%9C%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8A%80%E6%9C%AF%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%AF%87/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
