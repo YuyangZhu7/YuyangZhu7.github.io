@@ -23,7 +23,8 @@
   <entry>
     <title>Markdown 入门教程</title>
     <url>/2024/11/20/stu/</url>
-    <content><![CDATA[<h1 id="Markdown-入门教程"><a href="#Markdown-入门教程" class="headerlink" title="Markdown 入门教程"></a><center><font face="仿宋" color=orange>Markdown 入门教程</font></center></h1><h2 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a><center><font face="楷体" size=5>朱宇阳</font></center></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
+    <content><![CDATA[<span id="more"></span>
+<h1 id="Markdown-入门教程"><a href="#Markdown-入门教程" class="headerlink" title="Markdown 入门教程"></a><center><font face="仿宋" color=orange>Markdown 入门教程</font></center></h1><h2 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a><center><font face="楷体" size=5>朱宇阳</font></center></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
 <p>Markdown 是一种轻量级的标记语言。</p>
 <blockquote>
 <p>你可以用它快速编写结构化的文档。</p>
@@ -109,22 +110,6 @@
 </tbody></table>
 <hr>
 <h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>以下是一个 Python 请求的代码示例：</p>
-<pre><code class="python">headers = &#123;
-    &#39;Origin&#39;: &#39;https://search.jd.com&#39;,
-    &#39;Cookie&#39;: &#39;shshshfpa=7637622a-83de-6e41-832a-da12d188f4cf-1684543311&#39;,
-    &#39;Referer&#39;: &#39;https://search.jd.com/&#39;,
-    &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&#39;,
-&#125;
-url = &#39;https://item.jd.com/100103217782.html&#39;
-</code></pre>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-        <tag>教程</tag>
-        <tag>博客</tag>
-      </tags>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Origin&#x27;</span>: <span class="string">&#x27;https://search.jd.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Cookie&#x27;</span>: <span class="string">&#x27;shshshfpa=7637622a-83de-6e41-832a-da12d188f4cf-1684543311&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://search.jd.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://item.jd.com/100103217782.html&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>

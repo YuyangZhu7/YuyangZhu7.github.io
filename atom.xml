@@ -6,7 +6,7 @@
   <link href="https://yuyangzhu7.github.io/atom.xml" rel="self"/>
   
   <link href="https://yuyangzhu7.github.io/"/>
-  <updated>2024-11-20T09:56:20.942Z</updated>
+  <updated>2024-11-20T10:00:00.304Z</updated>
   <id>https://yuyangzhu7.github.io/</id>
   
   <author>
@@ -21,26 +21,19 @@
     <link href="https://yuyangzhu7.github.io/2024/11/20/stu/"/>
     <id>https://yuyangzhu7.github.io/2024/11/20/stu/</id>
     <published>2024-11-19T16:00:00.000Z</published>
-    <updated>2024-11-20T09:56:20.942Z</updated>
+    <updated>2024-11-20T10:00:00.304Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Markdown-入门教程"><a href="#Markdown-入门教程" class="headerlink" title="Markdown 入门教程"></a><center><font face="仿宋" color=orange>Markdown 入门教程</font></center></h1><h2 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a><center><font face="楷体" size=5>朱宇阳</font></center></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote><p>Markdown 是一种轻量级的标记语言。</p><blockquote><p>你可以用它快速编写结构化的文档。</p></blockquote></blockquote><hr><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol><li><p><strong>无序列表</strong></p><ul><li>项目 A</li></ul><ul><li>项目 B</li></ul><ul><li>项目 C</li></ul></li><li><p><strong>有序列表</strong></p><ol><li>步骤一</li><li>步骤二</li><li>步骤三</li></ol></li><li><p><strong>任务清单</strong></p><ul><li><input checked="" disabled="" type="checkbox"> 学习 Markdown</li><li><input disabled="" type="checkbox"> 写一篇博客</li><li><input disabled="" type="checkbox"> 分享知识</li></ul></li></ol><hr><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table><thead><tr><th align="center">名称</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center"><strong>帅哥1</strong></td><td align="center">可食用</td></tr><tr><td align="center"><strong>帅哥2</strong></td><td align="center">大数据</td></tr><tr><td align="center"><strong>其他</strong></td><td align="center">示例数据</td></tr></tbody></table><hr><h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><table><thead><tr><th align="center">效果</th><th align="center">语法</th></tr></thead><tbody><tr><td align="center"><em>斜体</em></td><td align="center"><code>*斜体*</code></td></tr><tr><td align="center"><strong>粗体</strong></td><td align="center"><code>**粗体**</code></td></tr><tr><td align="center"><em><strong>粗斜体</strong></em></td><td align="center"><code>***粗斜体***</code></td></tr><tr><td align="center"><del>删除线</del></td><td align="center"><code>~~删除线~~</code></td></tr><tr><td align="center">&#x3D;&#x3D;高亮&#x3D;&#x3D;</td><td align="center"><code>==高亮==</code></td></tr></tbody></table><hr><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>以下是一个 Python 请求的代码示例：</p><pre><code class="python">headers = &#123;    &#39;Origin&#39;: &#39;https://search.jd.com&#39;,    &#39;Cookie&#39;: &#39;shshshfpa=7637622a-83de-6e41-832a-da12d188f4cf-1684543311&#39;,    &#39;Referer&#39;: &#39;https://search.jd.com/&#39;,    &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&#39;,&#125;url = &#39;https://item.jd.com/100103217782.html&#39;</code></pre>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="Markdown-入门教程"><a href="#Markdown-入门教程" class="headerlink" title="Markdown 入门教程"></a><center><font face="仿宋" color=orange>Markdown 入门教程</font></center></h1><h2 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a><center><font face="楷体" size=5>朱宇阳</font></center></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote><p>Markdown 是一种轻量级的标记语言。</p><blockquote><p>你可以用它快速编写结构化的文档。</p></blockquote></blockquote><hr><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol><li><p><strong>无序列表</strong></p><ul><li>项目 A</li></ul><ul><li>项目 B</li></ul><ul><li>项目 C</li></ul></li><li><p><strong>有序列表</strong></p><ol><li>步骤一</li><li>步骤二</li><li>步骤三</li></ol></li><li><p><strong>任务清单</strong></p><ul><li><input checked="" disabled="" type="checkbox"> 学习 Markdown</li><li><input disabled="" type="checkbox"> 写一篇博客</li><li><input disabled="" type="checkbox"> 分享知识</li></ul></li></ol><hr><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table><thead><tr><th align="center">名称</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center"><strong>帅哥1</strong></td><td align="center">可食用</td></tr><tr><td align="center"><strong>帅哥2</strong></td><td align="center">大数据</td></tr><tr><td align="center"><strong>其他</strong></td><td align="center">示例数据</td></tr></tbody></table><hr><h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><table><thead><tr><th align="center">效果</th><th align="center">语法</th></tr></thead><tbody><tr><td align="center"><em>斜体</em></td><td align="center"><code>*斜体*</code></td></tr><tr><td align="center"><strong>粗体</strong></td><td align="center"><code>**粗体**</code></td></tr><tr><td align="center"><em><strong>粗斜体</strong></em></td><td align="center"><code>***粗斜体***</code></td></tr><tr><td align="center"><del>删除线</del></td><td align="center"><code>~~删除线~~</code></td></tr><tr><td align="center">&#x3D;&#x3D;高亮&#x3D;&#x3D;</td><td align="center"><code>==高亮==</code></td></tr></tbody></table><hr><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>以下是一个 Python 请求的代码示例：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Origin&#x27;</span>: <span class="string">&#x27;https://search.jd.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Cookie&#x27;</span>: <span class="string">&#x27;shshshfpa=7637622a-83de-6e41-832a-da12d188f4cf-1684543311&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://search.jd.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://item.jd.com/100103217782.html&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Markdown-入门教程&quot;&gt;&lt;a href=&quot;#Markdown-入门教程&quot; class=&quot;headerlink&quot; title=&quot;Markdown 入门教程&quot;&gt;&lt;/a&gt;&lt;center&gt;&lt;font face=&quot;仿宋&quot; color=orange&gt;Markdown 入</summary>
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;h1 id=&quot;Markdown-入门教程&quot;&gt;&lt;a href=&quot;#Markdown-入门教程&quot; class=&quot;headerlink&quot; title=&quot;Markdown 入门教程&quot;&gt;&lt;/a&gt;&lt;center&gt;&lt;font face=&quot;仿宋&quot;</summary>
       
     
     
     
-    <category term="学习笔记" scheme="https://yuyangzhu7.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Markdown" scheme="https://yuyangzhu7.github.io/tags/Markdown/"/>
-    
-    <category term="教程" scheme="https://yuyangzhu7.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="博客" scheme="https://yuyangzhu7.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
