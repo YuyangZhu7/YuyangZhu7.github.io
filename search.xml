@@ -21,9 +21,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>cotagories</title>
+    <url>/cotagories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<h3 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a>朱宇阳</h3><p>📱 手机：(+86)17828357275<br>✉️ 邮箱：<a href="mailto:&#x79;&#x75;&#x79;&#x61;&#x6e;&#103;&#x7a;&#104;&#x75;&#64;&#115;&#x74;&#x64;&#46;&#117;&#101;&#115;&#116;&#x63;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;">&#x79;&#x75;&#x79;&#x61;&#x6e;&#103;&#x7a;&#104;&#x75;&#64;&#115;&#x74;&#x64;&#46;&#117;&#101;&#115;&#116;&#x63;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;</a>  </p>
+    <content><![CDATA[<h3 id="朱宇阳"><a href="#朱宇阳" class="headerlink" title="朱宇阳"></a>朱宇阳</h3><p>📱 手机：(+86)17828357275<br>✉️ 邮箱：<a href="mailto:&#121;&#x75;&#121;&#x61;&#x6e;&#x67;&#x7a;&#104;&#x75;&#x40;&#115;&#116;&#x64;&#46;&#x75;&#x65;&#x73;&#x74;&#99;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#110;">&#121;&#x75;&#121;&#x61;&#x6e;&#x67;&#x7a;&#104;&#x75;&#x40;&#115;&#116;&#x64;&#46;&#x75;&#x65;&#x73;&#x74;&#99;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#110;</a>  </p>
 <hr>
 <h3 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h3><ul>
 <li><strong>电子科技大学</strong>  <ul>
@@ -52,11 +57,6 @@
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>cotagories</title>
-    <url>/cotagories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
