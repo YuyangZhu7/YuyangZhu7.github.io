@@ -3,10 +3,8 @@
   <entry>
     <title>个人主页</title>
     <url>/2024/11/20/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p>Welcome to my page! 本篇将记录博主个人主页搭建的各种信息和相关方式，欢迎参考</p>
+    <content><![CDATA[<p>Welcome to my <a href="yuyangzhu7.github.io">page</a>! 本篇将记录博主个人主页搭建的各种信息和相关方式，欢迎参考</p>
 <span id="more"></span>
-
-
 
 <h4 id="1-在标题前加入"><a href="#1-在标题前加入" class="headerlink" title="1.在标题前加入:"></a>1.在标题前加入:</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: &quot;个人主页&quot;</span><br><span class="line">date: 2024-11-20</span><br><span class="line">author: 朱宇阳</span><br></pre></td></tr></table></figure>
 <p>并前后行用“—”包裹,进行基本信息概括</p>
