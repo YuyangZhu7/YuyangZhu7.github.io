@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/show.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/show.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/show.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yuyangzhu7.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="title:”前沿论文阅读”data:2025-3-5author&#x3D;朱宇阳今日份论文阅读！ 参考：1.Visual-RFT2.Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success3.LatentLM-Multimodal Latent Language Modeling with Next-Tok">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yarn&#39;s blog">
+<meta property="og:url" content="https://yuyangzhu7.github.io/2025/03/05/%E5%89%8D%E6%B2%BF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
+<meta property="og:site_name" content="Yarn&#39;s blog">
+<meta property="og:description" content="title:”前沿论文阅读”data:2025-3-5author&#x3D;朱宇阳今日份论文阅读！ 参考：1.Visual-RFT2.Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success3.LatentLM-Multimodal Latent Language Modeling with Next-Tok">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1741153891716.png">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-9c4fea9cb00c2f1517fbd3eac1e1beb3_1440w.jpg">
+<meta property="article:published_time" content="2025-03-05T08:07:42.717Z">
+<meta property="article:modified_time" content="2025-03-05T08:20:38.260Z">
+<meta property="article:author" content="Yarn">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\%E6%9C%B1%E5%AE%87%E9%98%B3\AppData\Roaming\Typora\typora-user-images\1741153891716.png">
+
+<link rel="canonical" href="https://yuyangzhu7.github.io/2025/03/05/%E5%89%8D%E6%B2%BF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Yarn's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Yarn's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+   <a target="_blank" rel="noopener" href="https://github.com/you" style="position: fixed; top: 0; right: 0; text-decoration: none; border: none; padding: 0;">
+  <img decoding="async" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" style="border: none; margin: 0; padding: 0;">
+</a>
+
+
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yarn's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yuyangzhu7.github.io/2025/03/05/%E5%89%8D%E6%B2%BF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="Yarn">
+      <meta itemprop="description" content="Yarn的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yarn's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-03-05 16:07:42 / 修改时间：16:20:38" itemprop="dateCreated datePublished" datetime="2025-03-05T16:07:42+08:00">2025-03-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<h2 id="title-”前沿论文阅读”data-2025-3-5author-朱宇阳"><a href="#title-”前沿论文阅读”data-2025-3-5author-朱宇阳" class="headerlink" title="title:”前沿论文阅读”data:2025-3-5author&#x3D;朱宇阳"></a>title:”前沿论文阅读”<br>data:2025-3-5<br>author&#x3D;朱宇阳</h2><p>今日份论文阅读！</p>
+<p>参考：<br>1.<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2503.01785">Visual-RFT</a><br>2.<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2502.19645">Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success</a><br>3.<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2412.08635">LatentLM-Multimodal Latent Language Modeling with Next-Token Diffusion</a></p>
+<span id="more"></span> 
+
+
+
+<h1 id="LatentLM-Multimodal-Latent-Language-Modeling-with-Next-Token-Diffusion"><a href="#LatentLM-Multimodal-Latent-Language-Modeling-with-Next-Token-Diffusion" class="headerlink" title="LatentLM-Multimodal Latent Language Modeling with Next-Token Diffusion"></a>LatentLM-Multimodal Latent Language Modeling with Next-Token Diffusion</h1><p>本文通过在传统的<a target="_blank" rel="noopener" href="https://zhida.zhihu.com/search?content_id=251479695&content_type=Article&match_order=1&q=causal+transformer&zhida_source=entity">causal transformer</a>结构中引入diffusion实现对离散模态（语言）和连续模态（图像、音频）等的一致处理</p>
+<blockquote>
+<h3 id="1-Causal-Transformer（因果Transformer）"><a href="#1-Causal-Transformer（因果Transformer）" class="headerlink" title="1. Causal Transformer（因果Transformer）"></a><strong>1. Causal Transformer（因果Transformer）</strong></h3><ul>
+<li><strong>核心思想</strong>：在Transformer结构中引入<strong>因果性约束</strong>，确保每个位置的输出仅依赖于前面已生成的位置（即自回归顺序）。</li>
+<li><strong>关键机制</strong>：通过<strong>位置掩码（Position Masking）</strong> 实现。在自回归生成时，每个位置只能看到自身及左侧的位置信息，右侧位置被遮蔽（mask掉），防止信息泄漏。</li>
+</ul>
+<h3 id="2-tinuous-Vector（连续向量）"><a href="#2-tinuous-Vector（连续向量）" class="headerlink" title="2.tinuous Vector（连续向量）"></a><strong>2.tinuous Vector（连续向量）</strong></h3><ul>
+<li><strong>基本概念</strong>：将离散符号（如文本中的单词）或原始连续数据（如图像像素、音频波形）映射到<strong>高维连续空间</strong>的向量表示。</li>
+<li>目的：</li>
+<li><strong>统一模态表示</strong>：使离散模态（语言）和连续模态（图像&#x2F;音频）能在同一模型中处理。</li>
+<li><strong>降低计算复杂度</strong>：通过低维潜在空间（如VAE编码）压缩数据，减少计算量。</li>
+</ul>
+</blockquote>
+<p>总体结构如下图所示</p>
+<p><img src="C:\Users\朱宇阳\AppData\Roaming\Typora\typora-user-images\1741153891716.png" alt="1741153891716"></p>
+<p>图 1：Latent Language Modeling （LatentLM） 使用因果 Transformer 无缝处理连续（例如图像、音频、视频）和离散（例如文本和代码）数据。我们引入了 next-token diffusion 来逐个自回归生成潜在向量。所提出的方法提供了一个通用的接口，统一了多模态的生成和理解。</p>
+<p>多模态生成模型需要一种<strong>统一的建模方法</strong>来处理离散数据和连续数据。</p>
+<p>以前的大多数系统都依赖于构建管道或调用外部工具。但是，很难对基于管道的方法执行端到端优化。模块之间的信息丢失也会限制性能。 为了在多模态大型语言模型中原生处理离散和连续的数据，有三个主要的研究方向。</p>
+<h3 id="1-基于VQ-VAE的离散化方法"><a href="#1-基于VQ-VAE的离散化方法" class="headerlink" title="1. 基于VQ-VAE的离散化方法"></a><strong>1. 基于VQ-VAE的离散化方法</strong></h3><p><strong>核心思想</strong>：通过VQ-VAE将连续数据量化为离散代码，在自回归语言模型中统一建模为离散序列。<br><strong>代表工作</strong>：VQ-VAE、DALL-E、VQGAN等。<br><strong>流程</strong>：</p>
+<ol>
+<li><strong>编码阶段</strong>：使用VQ-VAE编码器将连续数据映射到离散的代码本（Codebook），生成离散代码序列。</li>
+<li><strong>建模阶段</strong>：所有数据（包括原始离散数据）均作为离散token输入自回归模型（如GPT），通过预测下一个token进行训练。</li>
+<li><strong>解码阶段</strong>：利用VQ-VAE解码器将离散代码重建为连续数据。</li>
+</ol>
+<p><strong>优势</strong>：</p>
+<ul>
+<li>统一离散和连续数据的表示，简化模型架构。</li>
+<li>自回归模型在文本生成任务中表现成熟。</li>
+</ul>
+<p><strong>局限性</strong>：</p>
+<ul>
+<li><strong>量化损失</strong>：VQ-VAE的离散化过程导致信息丢失，形成生成质量的瓶颈。</li>
+<li><strong>低压缩率</strong>：连续数据（如视频）离散化后序列过长，增加计算负担。</li>
+<li><strong>生成效率</strong>：长序列生成需要逐步自回归预测，速度较慢。</li>
+</ul>
+<hr>
+<h3 id="2-基于扩散模型的统一方法"><a href="#2-基于扩散模型的统一方法" class="headerlink" title="2. 基于扩散模型的统一方法"></a><strong>2. 基于扩散模型的统一方法</strong></h3><p><strong>核心思想</strong>：将离散数据整合到扩散模型的框架中，利用扩散过程统一生成连续和离散数据。<br><strong>代表工作</strong>：连续数据扩散模型（如DDPM）、离散扩散模型（如D3PM）。<br><strong>流程</strong>：</p>
+<ol>
+<li><strong>扩散过程</strong>：对输入数据逐步添加噪声（连续数据）或扰动（离散数据）。</li>
+<li><strong>去噪训练</strong>：模型学习从噪声中恢复原始数据。</li>
+<li><strong>统一生成</strong>：通过同一扩散框架生成多模态数据。</li>
+</ol>
+<p><strong>优势</strong>：</p>
+<ul>
+<li>扩散模型在连续数据生成（如图像、音频）上表现优异。</li>
+<li>理论上可统一多模态生成流程。</li>
+</ul>
+<p><strong>局限性</strong>：</p>
+<ul>
+<li><strong>离散数据建模性能下降</strong>：文本等离散数据需依赖自回归或掩码预测机制，扩散框架可能不如传统语言模型高效,其本身不是为了离散数据设计的。</li>
+<li><strong>训练目标冲突</strong>：连续数据的噪声添加与离散数据的扰动机制难以完全兼容，可能导致联合训练不稳定。</li>
+</ul>
+<hr>
+<h3 id="3-共享参数但分治目标的混合方法"><a href="#3-共享参数但分治目标的混合方法" class="headerlink" title="3. 共享参数但分治目标的混合方法"></a><strong>3. 共享参数但分治目标的混合方法</strong></h3><p><strong>核心思想</strong>：共享模型主干参数，但针对不同数据类型采用不同训练目标（扩散去噪 vs. 自回归预测）。<br><strong>代表工作</strong>：UniDiffuser、Lumina等。<br><strong>流程</strong>：</p>
+<ol>
+<li><strong>参数共享</strong>：模型主干（如Transformer层）处理所有类型数据。</li>
+<li>分治目标：<ul>
+<li><strong>连续数据</strong>：使用扩散目标（双向注意力，逐步去噪）。</li>
+<li><strong>离散数据</strong>：使用自回归目标（因果注意力，预测下一token）。</li>
+</ul>
+</li>
+<li><strong>联合训练</strong>：交替优化两种目标，实现多模态生成。</li>
+</ol>
+<p><strong>优势</strong>：</p>
+<ul>
+<li>参数共享提升模型容量利用率。</li>
+<li>灵活适应不同数据类型的生成需求。</li>
+</ul>
+<p><strong>局限性</strong>：</p>
+<ul>
+<li><strong>目标冲突</strong>：扩散去噪与自回归预测的目标差异可能导致优化方向不一致。</li>
+<li><strong>架构复杂性</strong>：需同时支持双向和因果注意力，增加实现难度。</li>
+<li><strong>可变长度序列限制</strong>：扩散模型的双向注意力难以处理动态生成的序列（如实时语音）。</li>
+<li><strong>噪声干扰</strong>：扩散训练的噪声可能破坏离散数据的联合训练效果。</li>
+</ul>
+<h4 id="4-本文核心方法：Latent-Language-Modeling-LatentLM"><a href="#4-本文核心方法：Latent-Language-Modeling-LatentLM" class="headerlink" title="4. 本文核心方法：Latent Language Modeling (LatentLM)"></a><strong>4. 本文核心方法：Latent Language Modeling (LatentLM)</strong></h4><h5 id="1-统一建模框架"><a href="#1-统一建模框架" class="headerlink" title="(1) 统一建模框架"></a><strong>(1) 统一建模框架</strong></h5><p>LatentLM的核心目标是<strong>通过因果Transformer架构统一处理离散（如文本）和连续（如图像、音频）数据</strong>，其核心创新点包括：</p>
+<ul>
+<li><strong>潜在空间表示</strong>：使用VAE将连续数据映射为低维连续向量（Latent Vectors），与离散数据的词嵌入（Word Embedding）共享同一语义空间。</li>
+<li><strong>Next-Token Diffusion</strong>：通过扩散模型自回归预测连续数据的潜在向量，与传统语言模型的Next-Token Prediction（Softmax）结合，实现多模态统一生成。</li>
+<li><strong>σ-VAE</strong>：改进VAE的潜在空间分布，使其更适合自回归解码。</li>
+</ul>
+<h5 id="2-技术流程"><a href="#2-技术流程" class="headerlink" title="(2) 技术流程"></a><strong>(2) 技术流程</strong></h5><ol>
+<li>输入处理：<ul>
+<li><strong>离散数据（文本）</strong>：通过词嵌入转换为连续向量序列。</li>
+<li><strong>连续数据（图像&#x2F;音频）</strong>：通过VAE编码为潜在向量序列。</li>
+</ul>
+</li>
+<li>共享Transformer处理：<ul>
+<li>所有模态的潜在向量输入同一因果Transformer，生成联合上下文表示。</li>
+</ul>
+</li>
+<li>输出解码：<ul>
+<li><strong>离散数据</strong>：使用Softmax Head预测下一个词。</li>
+<li><strong>连续数据</strong>：使用Diffusion Head生成下一个潜在向量，并通过VAE解码器还原原始数据</li>
+</ul>
+</li>
+</ol>
+<p>实际实现中，过程如下：</p>
+<p>atentLM的核心设计目标是通过一个统一的Transformer架构，同时支持离散（文本）和连续（图像&#x2F;音频）模态的生成。其实现流程分为以下步骤：</p>
+<ol>
+<li>离散数据（文本）处理：<ul>
+<li>传统语言模型（LM）方式：输入文本序列→词嵌入→因果Transformer→LM Head预测下一个词。</li>
+</ul>
+</li>
+<li>连续数据（图像）处理：<ul>
+<li>VAE编码：图像→潜在向量→因果Transformer→Diffusion Head预测去噪后的潜在向量→VAE解码器重建图像。</li>
+</ul>
+</li>
+</ol>
+<p>整个过程通过<strong>共享的因果Transformer</strong>实现模态间信息交互，下图展示了这一流程：</p>
+<p><img src="https://pic2.zhimg.com/v2-9c4fea9cb00c2f1517fbd3eac1e1beb3_1440w.jpg" alt="img"></p>
+<p>其中文章使用的类似VAE结构与原始VAE略有不同，文章中固定了标准差，用于防止训练过程发生collapse。故loss由原本的(1)式转变为了(3)式</p>
+<p>$$<br>maximize\quad \mathbb E_{q_{\phi} (z|x)}[\log p_{\psi}(x|z)-D_{KL}[q_{\phi} (z|x) || p(z)]<br>$$<br>$$<br>minimize ||\hat x-x||^2_2 +\beta ||\mu||^2_2<br>$$</p>
+<h1 id="Visual-RFT-Visual-Reinforcement-Fine-Tuning"><a href="#Visual-RFT-Visual-Reinforcement-Fine-Tuning" class="headerlink" title="Visual-RFT: Visual Reinforcement Fine-Tuning"></a>Visual-RFT: Visual Reinforcement Fine-Tuning</h1><p>OpenAI o1 等大型<strong>推理模型</strong>中的强化微调 （RFT） 从其答案的反馈中学习，这在微调数据稀缺的应用程序中特别有用。具有可验证奖励的强化学习是再现 o1 的一个关键方向。在多模态领域的应用仍未得到充分探索。这项工作</p>
+<ul>
+<li><p>引入了视觉强化微调 （Visual-RFT），它进一步扩展了 RFT 在视觉任务上的应用领域。首先使用大型视觉语言模型 （LVLM） 生成多个响应，其中包含每个输入的推理标记和最终答案，</p>
+</li>
+<li><p>提出<strong>视觉感知可验证奖励函数</strong>通过策略优化算法（如组相对策略优化 （GRPO））来更新模型。</p>
+</li>
+<li><p>不同的感知任务设计了不同的可验证奖励函数，例如用于对象检测的交集 （IoU） 奖励。</p>
+</li>
+<li><p>与监督微调 （SFT） 相比，Visual-RFT 具有竞争力的性能和先进的泛化能力。</p>
+</li>
+</ul>
+<h3 id="大型推理模型（LRMs）与强化微调（RFT）的深度解析"><a href="#大型推理模型（LRMs）与强化微调（RFT）的深度解析" class="headerlink" title="大型推理模型（LRMs）与强化微调（RFT）的深度解析"></a><strong>大型推理模型（LRMs）与强化微调（RFT）的深度解析</strong></h3><h4 id="1-大型推理模型（LRMs）的定义与核心能力"><a href="#1-大型推理模型（LRMs）的定义与核心能力" class="headerlink" title="1. 大型推理模型（LRMs）的定义与核心能力"></a><strong>1. 大型推理模型（LRMs）的定义与核心能力</strong></h4><p><strong>大型推理模型（LRMs）</strong> 是一类专注于复杂多步推理任务的前沿AI模型，其核心目标是通过<strong>延长“思考”时间</strong>（即增加推理步骤或优化内部决策机制）提升模型在数学证明、逻辑推理、代码生成等任务中的表现。典型代表如 <strong>OpenAI o1</strong>，其设计理念强调在生成最终答案前进行更深入的内部推理。</p>
+<h5 id="关键特征："><a href="#关键特征：" class="headerlink" title="关键特征："></a><strong>关键特征</strong>：</h5><p>• <strong>多步推理能力</strong>：通过链式思考（Chain-of-Thought）、思维树（Tree-of-Thoughts）或自省机制（Self-Refinement）模拟人类的多步推理过程。<br>• <strong>模块化架构</strong>：可能包含推理模块（如符号逻辑引擎）与生成模块（如Transformer）的协同工作。<br>• <strong>延迟生成策略</strong>：在输出答案前执行多次内部计算或验证步骤。</p>
+<hr>
+<h4 id="2-强化微调（RFT）的核心机制"><a href="#2-强化微调（RFT）的核心机制" class="headerlink" title="2. 强化微调（RFT）的核心机制"></a><strong>2. 强化微调（RFT）的核心机制</strong></h4><p><strong>强化微调（RFT）</strong> 是一种针对预训练语言模型（LLMs）的高效微调方法，其核心思想是<strong>通过强化学习（RL）优化模型在特定任务中的表现，仅需少量样本即可实现领域适应</strong>。与传统RLHF（基于人类反馈的强化学习）相比，RFT的突破在于<strong>样本效率</strong>和<strong>规则驱动</strong>。</p>
+<h5 id="RFT与传统RLHF的对比："><a href="#RFT与传统RLHF的对比：" class="headerlink" title="RFT与传统RLHF的对比："></a><strong>RFT与传统RLHF的对比</strong>：</h5><table>
+<thead>
+<tr>
+<th><strong>维度</strong></th>
+<th><strong>传统RLHF</strong></th>
+<th><strong>RFT</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>奖励来源</strong></td>
+<td>基于人类偏好数据训练的奖励模型</td>
+<td>由预定义规则直接计算（Verifiable Rewards）</td>
+</tr>
+<tr>
+<td><strong>数据需求</strong></td>
+<td>需大量标注的偏好数据（如数万条）</td>
+<td>仅需少量任务样本（几十至几千条）</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>通用任务（如对话安全性、创意生成）</td>
+<td>领域特定任务（如数学解题、代码生成）</td>
+</tr>
+<tr>
+<td><strong>可解释性</strong></td>
+<td>低（依赖黑盒奖励模型）</td>
+<td>高（奖励规则透明）</td>
+</tr>
+</tbody></table>
+<h5 id="RFT实现步骤："><a href="#RFT实现步骤：" class="headerlink" title="RFT实现步骤："></a><strong>RFT实现步骤</strong>：</h5><ol>
+<li><strong>任务定义</strong>：明确领域任务的输入输出格式（如数学问题→解题步骤→答案）。</li>
+<li><strong>规则化奖励设计</strong>：将任务成功标准编码为可计算的奖励函数（如答案正确性、步骤规范性）。</li>
+<li><strong>策略优化</strong>：通过PPO等RL算法，最大化模型输出在奖励函数下的得分。</li>
+</ol>
+<hr>
+<h4 id="3-可验证奖励（Verifiable-Rewards）的技术创新"><a href="#3-可验证奖励（Verifiable-Rewards）的技术创新" class="headerlink" title="3. 可验证奖励（Verifiable Rewards）的技术创新"></a><strong>3. 可验证奖励（Verifiable Rewards）的技术创新</strong></h4><p><strong>可验证奖励</strong> 是复现类似o1模型的关键技术，其核心在于<strong>通过预定义规则直接计算强化学习中的奖励分数</strong>，而非依赖独立训练的奖励模型。这一方法在开源研究（如DeepSeek R1）中已被验证有效。</p>
+<h5 id="典型应用场景："><a href="#典型应用场景：" class="headerlink" title="典型应用场景："></a><strong>典型应用场景</strong>：</h5><p>• <strong>数学推理</strong>：答案正确性可通过符号计算验证（如SymPy库自动评分）。<br>• <strong>代码生成</strong>：奖励基于代码能否通过测试用例（如LeetCode评测）。<br>• <strong>逻辑证明</strong>：奖励取决于推理步骤是否符合形式逻辑规则。</p>
+<h5 id="技术优势："><a href="#技术优势：" class="headerlink" title="技术优势："></a><strong>技术优势</strong>：</h5><p>• <strong>减少数据依赖</strong>：无需收集人类偏好数据，降低标注成本。<br>• <strong>消除奖励模型偏差</strong>：直接使用确定性规则，避免奖励模型的预测误差。<br>• <strong>提升训练稳定性</strong>：规则化奖励提供明确的优化信号，加速收敛。</p>
+<hr>
+<h4 id="4-可验证奖励-vs-传统奖励模型"><a href="#4-可验证奖励-vs-传统奖励模型" class="headerlink" title="4. 可验证奖励 vs. 传统奖励模型"></a><strong>4. 可验证奖励 vs. 传统奖励模型</strong></h4><table>
+<thead>
+<tr>
+<th><strong>对比项</strong></th>
+<th><strong>传统奖励模型</strong></th>
+<th><strong>可验证奖励</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>训练数据</strong></td>
+<td>需要人类标注的偏好数据（如A&#x2F;B测试结果）</td>
+<td>无需额外数据，依赖预定义规则</td>
+</tr>
+<tr>
+<td><strong>适用范围</strong></td>
+<td>主观性任务（如文本流畅性、创意评分）</td>
+<td>客观性任务（如数学、代码、科学问题）</td>
+</tr>
+<tr>
+<td><strong>计算开销</strong></td>
+<td>需额外训练和部署奖励模型</td>
+<td>直接调用规则函数，无额外模型推理成本</td>
+</tr>
+<tr>
+<td><strong>可迁移性</strong></td>
+<td>跨任务泛化能力有限</td>
+<td>规则可复用至同类任务（如不同编程语言代码生成）</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="5-复现o1的技术路径：以DeepSeek-R1为例"><a href="#5-复现o1的技术路径：以DeepSeek-R1为例" class="headerlink" title="5. 复现o1的技术路径：以DeepSeek R1为例"></a><strong>5. 复现o1的技术路径：以DeepSeek R1为例</strong></h4><p>开源研究（如DeepSeek R1）揭示了复现o1的可能方向：<strong>将可验证奖励与多步推理架构结合</strong>。</p>
+<h5 id="关键技术步骤："><a href="#关键技术步骤：" class="headerlink" title="关键技术步骤："></a><strong>关键技术步骤</strong>：</h5><ol>
+<li><strong>架构设计</strong>：<br>• <strong>推理模块</strong>：集成符号计算库（如Wolfram Alpha API）或形式化验证工具。<br>• <strong>生成模块</strong>：基于Transformer的LLM，负责生成候选答案。<br>• <strong>验证模块</strong>：自动执行规则检查（如代码测试、数学验证）。</li>
+<li><strong>训练流程</strong>：<br>• <strong>预训练</strong>：在通用语料上训练基础LLM。<br>• <strong>RFT微调</strong>：使用可验证奖励优化特定任务（如仅用100条数学题样本）。</li>
+<li><strong>推理优化</strong>：<br>• <strong>延迟生成</strong>：模型生成中间步骤后，调用验证模块检查正确性，若失败则重新推理。<br>• <strong>自省机制</strong>：根据验证结果动态调整生成策略（如优先选择已验证正确的子步骤）。</li>
+</ol>
+<p>SFT 范式（见图 2 （a））直接模仿高质量、精选数据中提供的 “groundtruth” 答案，从而依赖于大量的训练数据。相比之下，RFT 会评估模型的响应，并根据它们是否正确进行调整，从而帮助它通过反复试验来学习。因此，RFT 在数据稀缺的领域特别有用 [7， 24]。然而，以前的常识是 RFT 仅应用于科学（例如数学）和代码生成等任务。这是因为数学和编码展示了清晰客观的最终答案或测试用例，这使得它们的奖励相对容易验证。在本文中，我们证明了 RFT 可以应用于数学和代码域之外的视觉感知任务。具体来说，我们引入了视觉强化微调 （Visual-RFT），它成功地扩展了 RFT，使大型视觉语言模型 （LVLM） 能够在各种多模态任务中发挥作用（见图 1），例如小镜头分类和开放词汇对象检测。</p>
+<p>为了在视觉任务上扩展 RFT，我们在图 2 （b） 中展示了 Visual-RFT 的实现细节。对于每个输入，Visual-RFT 使用大型视觉语言模型 （LVLM） 生成包含推理标记和最终答案的多个响应（轨迹）。至关重要的是，我们定义了特定于任务的、基于规则的可验证奖励函数，以指导策略优化，例如 GRPO [31]，以更新模型。例如，我们建议为对象检测任务提供交集与联合 （IoU） 奖励。我们的 Visual-RFT 与 SFT 形成鲜明对比，后者依赖于记住正确答案。相反，我们的方法探索了不同的可能解决方案，并学会了针对我们经过验证的奖励函数定义的预期结果进行优化。这是关于发现最有效的方法，而不仅仅是模仿预定义的答案。我们的方法将训练范式从 SFT 中的数据扩展转变为针对特定多模态任务量身定制的可变奖励函数的战略设计。如图 2 （c） 所示，可验证奖励和视觉感知能力（例如，检测、接地、分类）的协同组合使我们的模型能够在详细的推理过程的帮助下实现对新概念的快速和数据高效掌握。</p>
+<h1 id="Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed-and-Success"><a href="#Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed-and-Success" class="headerlink" title="Fine-Tuning Vision-Language-Action Models:  Optimizing Speed and Success"></a>Fine-Tuning Vision-Language-Action Models:  Optimizing Speed and Success</h1>
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/03/05/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-%E2%80%9D%E5%89%8D%E6%B2%BF%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E2%80%9Ddata-2025-3-5author-%E6%9C%B1%E5%AE%87%E9%98%B3"><span class="nav-number">1.</span> <span class="nav-text">title:”前沿论文阅读”data:2025-3-5author&#x3D;朱宇阳</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LatentLM-Multimodal-Latent-Language-Modeling-with-Next-Token-Diffusion"><span class="nav-number"></span> <span class="nav-text">LatentLM-Multimodal Latent Language Modeling with Next-Token Diffusion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Causal-Transformer%EF%BC%88%E5%9B%A0%E6%9E%9CTransformer%EF%BC%89"><span class="nav-number">0.1.</span> <span class="nav-text">1. Causal Transformer（因果Transformer）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-tinuous-Vector%EF%BC%88%E8%BF%9E%E7%BB%AD%E5%90%91%E9%87%8F%EF%BC%89"><span class="nav-number">0.2.</span> <span class="nav-text">2.tinuous Vector（连续向量）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E4%BA%8EVQ-VAE%E7%9A%84%E7%A6%BB%E6%95%A3%E5%8C%96%E6%96%B9%E6%B3%95"><span class="nav-number">0.3.</span> <span class="nav-text">1. 基于VQ-VAE的离散化方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E4%BA%8E%E6%89%A9%E6%95%A3%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%9F%E4%B8%80%E6%96%B9%E6%B3%95"><span class="nav-number">0.4.</span> <span class="nav-text">2. 基于扩散模型的统一方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B1%E4%BA%AB%E5%8F%82%E6%95%B0%E4%BD%86%E5%88%86%E6%B2%BB%E7%9B%AE%E6%A0%87%E7%9A%84%E6%B7%B7%E5%90%88%E6%96%B9%E6%B3%95"><span class="nav-number">0.5.</span> <span class="nav-text">3. 共享参数但分治目标的混合方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9C%AC%E6%96%87%E6%A0%B8%E5%BF%83%E6%96%B9%E6%B3%95%EF%BC%9ALatent-Language-Modeling-LatentLM"><span class="nav-number">0.5.1.</span> <span class="nav-text">4. 本文核心方法：Latent Language Modeling (LatentLM)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E6%A1%86%E6%9E%B6"><span class="nav-number">0.5.1.1.</span> <span class="nav-text">(1) 统一建模框架</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%80%E6%9C%AF%E6%B5%81%E7%A8%8B"><span class="nav-number">0.5.1.2.</span> <span class="nav-text">(2) 技术流程</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Visual-RFT-Visual-Reinforcement-Fine-Tuning"><span class="nav-number"></span> <span class="nav-text">Visual-RFT: Visual Reinforcement Fine-Tuning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%9E%8B%E6%8E%A8%E7%90%86%E6%A8%A1%E5%9E%8B%EF%BC%88LRMs%EF%BC%89%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%BE%AE%E8%B0%83%EF%BC%88RFT%EF%BC%89%E7%9A%84%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90"><span class="nav-number">0.1.</span> <span class="nav-text">大型推理模型（LRMs）与强化微调（RFT）的深度解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A4%A7%E5%9E%8B%E6%8E%A8%E7%90%86%E6%A8%A1%E5%9E%8B%EF%BC%88LRMs%EF%BC%89%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B"><span class="nav-number">0.1.1.</span> <span class="nav-text">1. 大型推理模型（LRMs）的定义与核心能力</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E7%89%B9%E5%BE%81%EF%BC%9A"><span class="nav-number">0.1.1.1.</span> <span class="nav-text">关键特征：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%BA%E5%8C%96%E5%BE%AE%E8%B0%83%EF%BC%88RFT%EF%BC%89%E7%9A%84%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6"><span class="nav-number">0.1.2.</span> <span class="nav-text">2. 强化微调（RFT）的核心机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#RFT%E4%B8%8E%E4%BC%A0%E7%BB%9FRLHF%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%9A"><span class="nav-number">0.1.2.1.</span> <span class="nav-text">RFT与传统RLHF的对比：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RFT%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">0.1.2.2.</span> <span class="nav-text">RFT实现步骤：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8F%AF%E9%AA%8C%E8%AF%81%E5%A5%96%E5%8A%B1%EF%BC%88Verifiable-Rewards%EF%BC%89%E7%9A%84%E6%8A%80%E6%9C%AF%E5%88%9B%E6%96%B0"><span class="nav-number">0.1.3.</span> <span class="nav-text">3. 可验证奖励（Verifiable Rewards）的技术创新</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9A"><span class="nav-number">0.1.3.1.</span> <span class="nav-text">典型应用场景：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E4%BC%98%E5%8A%BF%EF%BC%9A"><span class="nav-number">0.1.3.2.</span> <span class="nav-text">技术优势：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%8F%AF%E9%AA%8C%E8%AF%81%E5%A5%96%E5%8A%B1-vs-%E4%BC%A0%E7%BB%9F%E5%A5%96%E5%8A%B1%E6%A8%A1%E5%9E%8B"><span class="nav-number">0.1.4.</span> <span class="nav-text">4. 可验证奖励 vs. 传统奖励模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%A4%8D%E7%8E%B0o1%E7%9A%84%E6%8A%80%E6%9C%AF%E8%B7%AF%E5%BE%84%EF%BC%9A%E4%BB%A5DeepSeek-R1%E4%B8%BA%E4%BE%8B"><span class="nav-number">0.1.5.</span> <span class="nav-text">5. 复现o1的技术路径：以DeepSeek R1为例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">0.1.5.1.</span> <span class="nav-text">关键技术步骤：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed-and-Success"><span class="nav-number"></span> <span class="nav-text">Fine-Tuning Vision-Language-Action Models:  Optimizing Speed and Success</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yarn"
+      src="/images/me.png">
+  <p class="site-author-name" itemprop="name">Yarn</p>
+  <div class="site-description" itemprop="description">Yarn的博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yuyangzhu7" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yuyangzhu7" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yuyangzhu@std.uestc.edu.cn" title="E-Mail → mailto:yuyangzhu@std.uestc.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yarn</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<div class="powered-by">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" site-pv-id="https://yuyangzhu7.github.io"></script>
+    <i class="fa fa-user-md"></i>
+    <span id="busuanzi_container_site_uv">
+    |
+        本站访客数:<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_pv">
+        本站访问量<span id="busuanzi_value_site_pv"></span>
+    </span>
+</div>
+
+
+
+<div class="theme-info">
+  |
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.9k字</span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
