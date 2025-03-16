@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>个人主页</title>
-    <url>/2024/11/20/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p>Welcome to my <a href="yuyangzhu7.github.io">page</a>! 本篇将记录博主个人主页搭建的各种信息和相关方式，欢迎参考</p>
-<span id="more"></span>
-
-<h4 id="1-在标题前加入"><a href="#1-在标题前加入" class="headerlink" title="1.在标题前加入:"></a>1.在标题前加入:</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: &quot;个人主页&quot;</span><br><span class="line">date: 2024-11-20</span><br><span class="line">author: 朱宇阳</span><br></pre></td></tr></table></figure>
-<p>并前后行用“—”包裹,进行基本信息概括</p>
-<h4 id="2-加入-以对过长部分进行收缩和展开"><a href="#2-加入-以对过长部分进行收缩和展开" class="headerlink" title="2.加入&lt;!–more–&gt; 以对过长部分进行收缩和展开"></a>2.加入&lt;!–more–&gt; 以对过长部分进行收缩和展开</h4><h4 id="3-hexo常见命令"><a href="#3-hexo常见命令" class="headerlink" title="3.hexo常见命令"></a>3.hexo常见命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean #清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">$ hexo generate   #生成静态文件。</span><br><span class="line">$ hexo server</span><br><span class="line">#启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line">$ hexo d #部署网站，构建在GitHub的服务器中。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">-d:                </span><br><span class="line">--deploy,文件生成后立即部署网站</span><br><span class="line">-w:</span><br><span class="line">--watch,监视文件变动</span><br><span class="line">-b:</span><br><span class="line">--bail,生成过程中如果发生任何未处理的异常则抛出异常</span><br><span class="line">-f</span><br><span class="line">:--force,强制重新生成文件. Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g 只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo generate</span><br><span class="line">-c</span><br><span class="line">:--concurrency,最大同时生成文件的数量，默认无限制</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>通常使用：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p> 其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。 <code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写 <code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写 </p>
-</blockquote>
-<h4 id="4-使用主题"><a href="#4-使用主题" class="headerlink" title="4.使用主题"></a>4.使用主题</h4><p>主题为<strong>next</strong>，目录为**&#x2F;Desktop&#x2F;competition&#x2F;Yuyang_Zhu**</p>
-<p>  blog文件夹（即根目录）下 <strong>themes文件夹，这个文件夹里面存放你下载的主题文件</strong>，可以看到next主题又再次包含一个文件夹，其中包含了next 主题的配置信息 </p>
-<p>修改 博客的标题，副标题，描述，等等基本信息:在 blog根目录下打开 _config.yml 配置文件，直接修改即可</p>
-<h4 id="5-参考学习链接："><a href="#5-参考学习链接：" class="headerlink" title="5.参考学习链接："></a>5.参考学习链接：</h4><p>Hexo+Next主题搭建个人博客+优化全过程（完整详细版）：<br><a href="https://zhuanlan.zhihu.com/p/618864711">https://zhuanlan.zhihu.com/p/618864711</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2025/03/05/VLA%20%E7%BB%BC%E8%BF%B0%E9%98%85%E8%AF%BB/</url>
     <content><![CDATA[<hr>
@@ -369,6 +346,29 @@
 ]]></content>
   </entry>
   <entry>
+    <title>个人主页</title>
+    <url>/2024/11/20/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>Welcome to my <a href="yuyangzhu7.github.io">page</a>! 本篇将记录博主个人主页搭建的各种信息和相关方式，欢迎参考</p>
+<span id="more"></span>
+
+<h4 id="1-在标题前加入"><a href="#1-在标题前加入" class="headerlink" title="1.在标题前加入:"></a>1.在标题前加入:</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: &quot;个人主页&quot;</span><br><span class="line">date: 2024-11-20</span><br><span class="line">author: 朱宇阳</span><br></pre></td></tr></table></figure>
+<p>并前后行用“—”包裹,进行基本信息概括</p>
+<h4 id="2-加入-以对过长部分进行收缩和展开"><a href="#2-加入-以对过长部分进行收缩和展开" class="headerlink" title="2.加入&lt;!–more–&gt; 以对过长部分进行收缩和展开"></a>2.加入&lt;!–more–&gt; 以对过长部分进行收缩和展开</h4><h4 id="3-hexo常见命令"><a href="#3-hexo常见命令" class="headerlink" title="3.hexo常见命令"></a>3.hexo常见命令</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean #清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">$ hexo generate   #生成静态文件。</span><br><span class="line">$ hexo server</span><br><span class="line">#启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line">$ hexo d #部署网站，构建在GitHub的服务器中。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">-d:                </span><br><span class="line">--deploy,文件生成后立即部署网站</span><br><span class="line">-w:</span><br><span class="line">--watch,监视文件变动</span><br><span class="line">-b:</span><br><span class="line">--bail,生成过程中如果发生任何未处理的异常则抛出异常</span><br><span class="line">-f</span><br><span class="line">:--force,强制重新生成文件. Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g 只会重新生成改动的文件。 使用该参数的效果接近 hexo clean &amp;&amp; hexo generate</span><br><span class="line">-c</span><br><span class="line">:--concurrency,最大同时生成文件的数量，默认无限制</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通常使用：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p> 其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。 <code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写 <code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写 </p>
+</blockquote>
+<h4 id="4-使用主题"><a href="#4-使用主题" class="headerlink" title="4.使用主题"></a>4.使用主题</h4><p>主题为<strong>next</strong>，目录为**&#x2F;Desktop&#x2F;competition&#x2F;Yuyang_Zhu**</p>
+<p>  blog文件夹（即根目录）下 <strong>themes文件夹，这个文件夹里面存放你下载的主题文件</strong>，可以看到next主题又再次包含一个文件夹，其中包含了next 主题的配置信息 </p>
+<p>修改 博客的标题，副标题，描述，等等基本信息:在 blog根目录下打开 _config.yml 配置文件，直接修改即可</p>
+<h4 id="5-参考学习链接："><a href="#5-参考学习链接：" class="headerlink" title="5.参考学习链接："></a>5.参考学习链接：</h4><p>Hexo+Next主题搭建个人博客+优化全过程（完整详细版）：<br><a href="https://zhuanlan.zhihu.com/p/618864711">https://zhuanlan.zhihu.com/p/618864711</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>爬虫代码分享</title>
     <url>/2025/02/20/%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<p>Welcome to my <a href="yuyangzhu7.github.io">page</a>! 本篇将介绍几种博主曾经撰写的爬虫代码,原创代码欢迎参考</p>
@@ -576,6 +576,54 @@
 </ol>
 <h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a><strong>4. 总结</strong></h2><p>• <strong>GCN 的局限性</strong>：<br>  • GCN 是一个传导学习模型，训练时需要访问整个图，无法处理动态图和新加入的节点。<br>• <strong>GraphSAGE 的创新</strong>：<br>  • GraphSAGE 是一个归纳学习框架，通过邻居采样和聚合机制，能够高效地为图中新加入的节点生成嵌入。<br>• <strong>GraphSAGE 的核心</strong>：<br>  • <strong>Sample</strong>：对邻居节点进行采样。<br>  • <strong>Aggregate</strong>：聚合邻居节点的信息。</p>
 <p>如果需要进一步探讨 GraphSAGE 的具体实现或与其他图神经网络模型的对比，请随时告诉我！</p>
+<h3 id="公式结构"><a href="#公式结构" class="headerlink" title="公式结构"></a><strong>公式结构</strong></h3><p>$$<br>\alpha_{i,j} &#x3D; \frac{\exp\left(\text{LeakyReLU}\left(\vec{a}^T [W\vec{h}_i | W\vec{h}<em>j]\right)\right)}{\sum</em>{k \in N_i} \exp\left(\text{LeakyReLU}\left(\vec{a}^T [W\vec{h}_i | W\vec{h}_k]\right)\right)}<br>$$</p>
+<h4 id="关键步骤解析"><a href="#关键步骤解析" class="headerlink" title="关键步骤解析"></a><strong>关键步骤解析</strong></h4><ol>
+<li><p><strong>线性变换（共享权重）</strong><br>• 每个节点 $i$ 和其邻居节点 $j$ 的原始特征 $\vec{h}_i$ 和 $\vec{h}_j$ 通过共享的权重矩阵 $W$ 进行线性变换，得到 $W\vec{h}_i$ 和 $W\vec{h}_j$。<br>• <strong>作用</strong>：将原始特征映射到高维空间，增强表达能力。</p>
+</li>
+<li><p><strong>拼接与注意力得分计算</strong><br>• 将变换后的特征拼接为 $[W\vec{h}_i | W\vec{h}_j]$（维度从 $d$ 变为 $2d$）。<br>• 通过可学习的参数向量 $\vec{a}$（维度 $2d$）与拼接向量做点积，得到标量注意力得分：<br>$$<br>  \text{Score}(i,j) &#x3D; \vec{a}^T [W\vec{h}_i | W\vec{h}_j]<br>$$<br>• <strong>作用</strong>：衡量节点 $i$ 和 $j$ 之间的相关性。</p>
+</li>
+<li><p><strong>非线性激活与归一化</strong><br>• 对得分应用 <strong>LeakyReLU</strong> 激活函数（允许负值输入，缓解梯度消失）。<br>• 通过 <strong>Softmax</strong> 归一化：<br>$$<br>  \alpha_{i,j} &#x3D; \frac{\exp(\text{LeakyReLU}(\text{Score}(i,j)))}{\sum_{k \in N_i} \exp(\text{LeakyReLU}(\text{Score}(i,k)))}<br>$$<br>• <strong>作用</strong>：归一化权重，使 $\sum_{j \in N_i} \alpha_{i,j} &#x3D; 1$。</p>
+</li>
+</ol>
+<h3 id="关键点说明"><a href="#关键点说明" class="headerlink" title="关键点说明"></a><strong>关键点说明</strong></h3><ol>
+<li><p><strong>共享参数</strong><br>• 权重矩阵 $W$ 和参数向量 $\vec{a}$ <strong>对所有节点共享</strong>，减少参数量并增强模型泛化能力。</p>
+</li>
+<li><p><strong>分母修正</strong><br>• 原公式分母可能存在笔误，正确的求和项应为 $\sum_{k \in N_i} \exp(\text{LeakyReLU}(\vec{a}^T [W\vec{h}_i | W\vec{h}_k]))$，即用 $k$ 替换 $j$，确保归一化时遍历所有邻居节点。</p>
+</li>
+<li><p><strong>注意力机制的优势</strong><br>• 动态分配权重：根据节点特征自适应学习连接重要性，优于预定义的图结构权重（如邻接矩阵）。<br>• 局部性：仅计算节点与其邻居的权重，复杂度为 $O(|E|)$，适合大规模图数据。</p>
+</li>
+</ol>
+<h3 id="示例计算"><a href="#示例计算" class="headerlink" title="示例计算"></a><strong>示例计算</strong></h3><p>假设节点 $i$ 的邻居为 ${j, k, l}$，特征维度 $d&#x3D;2$，则计算过程如下：</p>
+<ol>
+<li>对每个邻居 $j, k, l$，计算 $W\vec{h}_i$ 和 $W\vec{h}_j$，并拼接为 $4$ 维向量。  </li>
+<li>通过 $\vec{a}^T$ 计算得分，应用 LeakyReLU。  </li>
+<li>对得分取指数并归一化：<br>$$<br>\alpha_{i,j} &#x3D; \frac{\exp(s_{i,j})}{\exp(s_{i,j}) + \exp(s_{i,k}) + \exp(s_{i,l})}<br>$$</li>
+</ol>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a><strong>应用场景</strong></h3><p>该公式用于图注意力网络的 <strong>消息传递</strong> 阶段，节点 $i$ 的新特征为其邻居特征的加权和：<br>$$<br>\vec{h}<em>i’ &#x3D; \sigma\left(\sum</em>{j \in N_i} \alpha_{i,j} W \vec{h}_j\right)<br>$$<br>其中 $\sigma$ 是非线性激活函数（如 ReLU）。</p>
+<p>通过这一机制，图注意力网络能够显式建模节点间关系，适用于节点分类、链接预测等任务。</p>
+<h3 id="DiffPool-详解：层次化图池化赋能图分类任务"><a href="#DiffPool-详解：层次化图池化赋能图分类任务" class="headerlink" title="DiffPool 详解：层次化图池化赋能图分类任务"></a><strong>DiffPool 详解：层次化图池化赋能图分类任务</strong></h3><h4 id="背景与问题"><a href="#背景与问题" class="headerlink" title="背景与问题"></a><strong>背景与问题</strong></h4><p>传统的图分类方法通常在图神经网络（GNN）后接全局池化（如求和、平均等），将所有节点嵌入压缩为一个向量。然而，这种做法忽略了图中潜在的<strong>层级结构</strong>，例如分子中的官能团或社交网络中的社区，导致模型难以捕捉多层次特征。<strong>DiffPool</strong>（Differentiable Pooling）由斯坦福团队提出，通过<strong>可微的层次化池化</strong>，逐步将细粒度节点聚合成粗粒度簇，构建多层抽象表示，显著提升图分类性能。</p>
+<h3 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a><strong>核心思想</strong></h3><p>DiffPool 的核心是<strong>逐层粗化图结构</strong>，每层包含两个关键操作：</p>
+<ol>
+<li><strong>分配矩阵生成</strong>：动态决定当前层节点如何分配到下一层的簇。</li>
+<li><strong>图结构更新</strong>：根据分配结果，生成下一层的节点特征和邻接矩阵。</li>
+</ol>
+<p>通过堆叠多层，图从局部到全局的层级特征被逐层提取，最终通过顶层全局池化得到图的整体表示。</p>
+<h3 id="分层池化步骤"><a href="#分层池化步骤" class="headerlink" title="分层池化步骤"></a><strong>分层池化步骤</strong></h3><h4 id="1-分配矩阵生成（关键：可微与动态）"><a href="#1-分配矩阵生成（关键：可微与动态）" class="headerlink" title="1. 分配矩阵生成（关键：可微与动态）"></a><strong>1. 分配矩阵生成（关键：可微与动态）</strong></h4><p>• <strong>输入</strong>：当前层的节点特征 $X^{(l)} \in \mathbb{R}^{N_l \times d}$ 和邻接矩阵 $A^{(l)} \in \mathbb{R}^{N_l \times N_l}$（$N_l$ 为当前层节点数）。</p>
+<p>• <strong>过程</strong>：使用一个独立的GNN（称为 <strong>GNN_pool</strong>）生成分配矩阵 $S^{(l)} \in \mathbb{R}^{N_l \times N_{l+1}}$，其中 $N_{l+1}$ 是下一层的簇数：<br>$$<br>S^{(l)} &#x3D; \text{softmax}\left(\text{GNN}_\text{pool}(X^{(l)}, A^{(l)})\right)<br>$$<br>  • <strong>softmax</strong> 按行归一化，确保每个节点分配到各簇的概率和为1。</p>
+<p>  • <strong>GNN_pool</strong> 学习节点到簇的映射关系，例如通过注意力机制或消息传递。</p>
+<h4 id="2-节点特征聚合（粗化特征）"><a href="#2-节点特征聚合（粗化特征）" class="headerlink" title="2. 节点特征聚合（粗化特征）"></a><strong>2. 节点特征聚合（粗化特征）</strong></h4><p>• <strong>下一层节点特征</strong>：将当前层特征按簇加权聚合：<br>$$<br>X^{(l+1)} &#x3D; {S^{(l)}}^T \cdot \left(\text{GNN}_\text{embed}(X^{(l)}, A^{(l)})\right)<br>$$<br>  • <strong>GNN_embed</strong>：另一个GNN，用于更新节点特征，增强当前层的表示能力。</p>
+<p>  • ${S^{(l)}}^T \cdot (\cdot)$ 表示按簇分配权重求和，得到粗粒度特征。</p>
+<h4 id="3-邻接矩阵更新（粗化连接）"><a href="#3-邻接矩阵更新（粗化连接）" class="headerlink" title="3. 邻接矩阵更新（粗化连接）"></a><strong>3. 邻接矩阵更新（粗化连接）</strong></h4><p>• <strong>下一层邻接矩阵</strong>：计算簇之间的连接强度：<br>$$<br>  A^{(l+1)} &#x3D; {S^{(l)}}^T \cdot A^{(l)} \cdot S^{(l)}<br>$$<br>  • 若原图中节点 $i$ 和 $j$ 相连，则它们所属的簇 $c_i$ 和 $c_j$ 的连接强度累加 $S_{i,c_i} \cdot A_{i,j} \cdot S_{j,c_j}$。</p>
+<h3 id="训练与优化"><a href="#训练与优化" class="headerlink" title="训练与优化"></a><strong>训练与优化</strong></h3><p>• <strong>端到端训练</strong>：所有GNN（GNN_pool 和 GNN_embed）与分类器共同训练。<br>• <strong>正则化项</strong>：<br>  • <strong>链路预测损失</strong>：鼓励相邻节点分配到同一簇：<br>    $$<br>    \mathcal{L}<em>\text{LP} &#x3D; | A^{(l)} - S^{(l)} \cdot {S^{(l)}}^T |<em>F<br>    $$<br>  • <strong>熵正则化</strong>：防止分配矩阵过于稀疏或稠密：<br>    $$<br>    \mathcal{L}<em>\text{Entropy} &#x3D; -\frac{1}{N_l} \sum</em>{i&#x3D;1}^{N_l} \sum</em>{c&#x3D;1}^{N</em>{l+1}} S_{i,c}^{(l)} \log S_{i,c}^{(l)}<br>    $$<br>• <strong>总损失</strong>：分类损失 + $\lambda_1 \mathcal{L}_\text{LP} + \lambda_2 \mathcal{L}_\text{Entropy}$。</p>
+<h3 id="示例流程"><a href="#示例流程" class="headerlink" title="示例流程"></a><strong>示例流程</strong></h3><p>以分子图分类为例（层级：原子 → 官能团 → 分子）：</p>
+<ol>
+<li><strong>第1层</strong>：原始原子节点，GNN提取原子特征。</li>
+<li><strong>第1次池化</strong>：GNN_pool 将原子分配到官能团簇，生成粗化特征和邻接矩阵。</li>
+<li><strong>第2层</strong>：官能团作为节点，GNN学习官能团间相互作用。</li>
+<li><strong>第2次池化</strong>：进一步聚合成分子整体表示，输入分类器预测标签。</li>
+</ol>
+<h3 id="优势与挑战"><a href="#优势与挑战" class="headerlink" title="优势与挑战"></a><strong>优势与挑战</strong></h3><p>• <strong>优势</strong>：<br>  • <strong>层次化表示</strong>：显式建模图的层级结构，适合复杂图数据。<br>  • <strong>端到端可微</strong>：无需预定义池化规则，适应多种任务。<br>  • <strong>灵活整合</strong>：可与任意GNN架构（如GCN、GAT）结合。</p>
+<p>• <strong>挑战</strong>：<br>  • <strong>计算开销</strong>：矩阵乘法复杂度为 $O(N^2)$，大规模图受限。<br>  • <strong>超参数敏感</strong>：需预设每层簇数 $N_{l+1}$，影响模型表现。<br>  • <strong>训练稳定性</strong>：多任务损失需精细调参。</p>
 ]]></content>
   </entry>
 </search>
